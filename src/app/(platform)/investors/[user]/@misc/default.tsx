@@ -1,10 +1,4 @@
-// THE MISCELLANEOUS ->
-// TOTAL INVESTORS
-// DEFAULT INVESTORS 
-// ACTIVE INVESTORS
-// INACTIVE INVESTORS
-
-function Page() {
+function Misc() {
 
   return <div>
     <ul>
@@ -16,4 +10,4 @@ function Page() {
   </div>
 }
 
-export default Page
+export default Misc

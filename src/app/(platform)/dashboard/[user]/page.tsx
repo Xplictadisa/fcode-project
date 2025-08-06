@@ -3,8 +3,7 @@
 // a dynamic route, user is dynamic
 
 function Dashboard() {
-
-  return <div className="text-center h-full">Dashboard</div>
+  return <div className="text-center h-full">Dashboard</div>;
 }
 
-export default Dashboard
+export default Dashboard;

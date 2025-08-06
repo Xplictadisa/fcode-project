@@ -2,8 +2,8 @@
 // route @ /investors/user
 // dynamic route, user is dynamic
 
-function Investors() {
-  return <>INVESTORS PAGE</>;
+function Page() {
+  return <div className="font-bold">INVESTORS PAGE</div>;
 }
 
-export default Investors
+export default Page;

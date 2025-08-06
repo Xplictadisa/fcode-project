@@ -3,9 +3,9 @@ import Link from "next/link";
 const navlinks = [
   { name: "Dashboard", path: "/dashboard/123" },
   { name: "Investors", path: "/investors/123" },
-  { name: "Plots", path: "/plots/123" },
+  { name: "Plots", path: "/projects/123" },
   { name: "Wallet", path: "/wallet/123" },
-  { name: "Agent Tracking", path: "/tracking" },
+  { name: "Agent Tracking", path: "/agent/123" },
   { name: "Reports", path: "/reports" },
   { name: "Audit Logs", path: "/audit" },
   { name: "Management", path: "/management" },
@@ -24,7 +24,7 @@ function NavLink() {
         ))}
       </ul>
       {/* LOG OUT */}
-      <div className="flex-1 flex items-end">
+      <div className="flex-1 flex items-end font-bold underline">
         <p>LOG OUT</p>
       </div>
     </div>

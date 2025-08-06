@@ -2,12 +2,12 @@
 // route @ /wallet/user
 // dynamic route, user is dynamic
 
-function Wallet() {
+function Page() {
   return (
     <div className="border-2 border-green-950 h-full font-bold text-2xl flex items-center justify-center">
       <div>WALLET PAGE</div>
     </div>
   );
 }
-git 
-export default Wallet;
+
+export default Page;
