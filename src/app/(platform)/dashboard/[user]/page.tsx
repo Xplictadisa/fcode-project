@@ -3,7 +3,8 @@
 // a dynamic route, user is dynamic
 
 function Dashboard() {
-  return <>DASHBOARD PAGE</>;
+
+  return <div className="text-center h-full">Dashboard</div>
 }
 
 export default Dashboard
