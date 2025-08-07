@@ -3,7 +3,18 @@
 // dynamic route, user is dynamic
 
 function Page() {
-  return <div className="font-bold">INVESTORS PAGE</div>;
+  return (
+    <div>
+      {/*page title-investors */}
+      <div className="flex justify-between">
+        <p>Investors</p>
+        <div>
+          <div className="h-8">search</div>
+          <div className="h-8">date</div>
+        </div>
+      </div>{" "}
+    </div>
+  );
 }
 
 export default Page;

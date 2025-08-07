@@ -1,11 +1,12 @@
 // TAKES ITS SEGMENT PAGE AS CHILDREN PROPS
 // ALSO WILL TAKES ANALYTICS, MISC  AND TRANSACTION
 
+import AnalyticsMisc from "@/src/component/ui/analytics/analyticsMisc";
+import Analytics from "@/src/component/ui/analytics/analyticsStat";
+import Transactions from "@/src/component/ui/transaction/transaction";
+
 function DashboardLayout({
   children,
-  analytics,
-  misc,
-  transactions,
 }: {
   children: React.ReactNode;
   analytics: React.ReactNode;
@@ -13,11 +14,13 @@ function DashboardLayout({
   transactions: React.ReactNode;
 }) {
   return (
-    <div className="border-2 border-blue-700 h-full">
-      <div>{children}</div>
-      <div>{analytics}</div>
-      <div>{misc}</div>
-      <div>{transactions}</div>
+    <div className="h-full overflow-hidden">
+      <div style={{scrollbarWidth: "none"}} className="h-full overflow-auto p-3 *:mb-9">
+        <div>{children}</div>
+        <AnalyticsMisc />
+        <Analytics />
+        <Transactions />
+      </div>
     </div>
   );
 }

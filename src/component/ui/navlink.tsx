@@ -1,4 +1,6 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navlinks = [
   { name: "Dashboard", path: "/dashboard/123" },
@@ -12,20 +14,28 @@ const navlinks = [
 ];
 
 function NavLink() {
+  const currentPath = usePathname();
+
   return (
-    <div className="border-2 border-pink-500 row-span-2 p-4 flex flex-col">
+    <div className="border-2 border-pink-500 row-span-2 p-4 flex flex-col h-full">
       <div className="mb-8 font-bold text-[20px]">Logo</div>
       {/* nav links */}
-      <ul className="*:p-2 *:text-blue-500 *:underline">
-        {navlinks.map((link) => (
-          <li key={link.name}>
-            <Link href={link.path}>{link.name}</Link>
-          </li>
-        ))}
+      <ul className="*:p-2">
+        {navlinks.map((link) => {
+          const isActive = currentPath === link.path;
+          return (
+            <li
+              className={`${isActive ? "text-blue-500 underline" : ""}`}
+              key={link.name}
+            >
+              <Link href={link.path}>{link.name}</Link>
+            </li>
+          );
+        })}
       </ul>
       {/* LOG OUT */}
       <div className="flex-1 flex items-end font-bold underline">
-        <p>LOG OUT</p>
+        <Link href={"/login"}>LOG OUT</Link>
       </div>
     </div>
   );

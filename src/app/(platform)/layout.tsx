@@ -5,13 +5,12 @@
 import NavLink from "@/src/component/ui/navlink";
 import User from "@/src/component/ui/user";
 
-
 function Layout({ children }: { children: React.ReactNode }) {
   return (
-    <div className="w-screen h-screen grid grid-cols-[minmax(200px,400px)_1fr] grid-rows-[50px_1fr] gap-2">
+    <div className="w-screen h-screen  grid grid-cols-[minmax(200px,300px)_1fr] grid-rows-[8vh_92vh]">
       <NavLink />
       <User />
-      <div className="">{children}</div>
+      <div className="border-2 border-blue-600">{children}</div>
     </div>
   );
 }
